@@ -1,0 +1,22 @@
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        int y=x,ld=0,r=0;
+        while(x>0){
+            ld=x%10;
+            x=x/10;
+            if((r>INT_MAX/10)||(r<INT_MIN/10)){
+                return false;
+            }
+            else{   
+            r=(r*10)+ld;
+            }
+        }
+        if(y==r){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+};
